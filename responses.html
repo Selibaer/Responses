@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Palmengarten — Antworten ansehen</title>
+    <link rel="stylesheet" href="responses.css">
+  </head>
+  <body>
+    <main class="workspace">
+      <header class="masthead">
+        <a class="wordmark" href="index.html">PALMENGARTEN <span>FRANKFURT</span></a>
+        <div class="masthead__meta">Designstudie · Auswertung</div>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="kicker">Antwortarchiv</p>
+        <h1 id="page-title">Stimmen<br>sichtbar machen.</h1>
+        <p class="intro__copy">Antwortdateien auswählen oder hier ablegen. Die Auswertung bleibt vollständig in diesem Browser.</p>
+      </section>
+
+      <section id="dropzone" class="dropzone" aria-label="JSON-Antwortdateien hochladen">
+        <input id="fileInput" type="file" accept="application/json,.json" multiple>
+        <div class="dropzone__mark">↓</div>
+        <div>
+          <strong>JSON-Dateien hierher ziehen</strong>
+          <span>oder <button id="browseButton" type="button">Dateien auswählen</button> — mehrere Dateien sind möglich</span>
+        </div>
+      </section>
+
+      <section id="emptyState" class="empty-state">
+        <p>Noch keine Antworten geladen.</p>
+        <span>Exportierte Dateien aus der Designstudie werden automatisch erkannt und zusammengefasst.</span>
+      </section>
+
+      <section id="results" hidden>
+        <div class="results-head">
+          <div>
+            <p class="kicker">Geladene Daten</p>
+            <h2><span id="responseCount">0</span> Antworten</h2>
+          </div>
+          <div class="results-actions">
+            <button id="exportButton" class="quiet-button" type="button">Zusammenfassung herunterladen</button>
+            <button id="clearButton" class="quiet-button" type="button">Liste leeren</button>
+          </div>
+        </div>
+
+        <div id="summary" class="summary" aria-label="Zusammenfassung"></div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <div id="responseList" class="response-list"></div>
+      </section>
+    </main>
+    <script src="responses.js"></script>
+  </body>
+</html>
